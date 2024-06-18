@@ -1,17 +1,27 @@
 package com.mysite.sbb;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Getter
-@Setter
 public class HelloLombok {
     private String hello;
     private int lombok;
 
+    public void setHello(String hello) {
+        this.hello = hello;
+    }
+
+    public void setLombok(int lombok) {
+        this.lombok = lombok;
+    }
+
+    public String getHello() {
+        return this.hello;
+    }
+
+    public int getLombok() {
+        return this.lombok;
+    }
+
     public static void main(String[] args) {
         HelloLombok helloLombok = new HelloLombok();
-        // 롬복 : Getter,Setter 메서드 별도 작성 없이 메서드 사용 가능
         helloLombok.setHello("헬로");
         helloLombok.setLombok(5);
 
