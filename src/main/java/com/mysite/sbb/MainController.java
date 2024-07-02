@@ -11,4 +11,9 @@ public class MainController {
     public String index() { // 응답을 받기 위해 void -> String으로 변경
         return "안녕하세요 sbb에 오신 것을 환영합니다.";
     }
+
+    @GetMapping("/")
+    public String root() {
+        return "redirect:/question/list";
+    }
 }
